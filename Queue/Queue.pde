@@ -1,8 +1,8 @@
 void setup() {
   PrinterQueue demo = new PrinterQueue();
-  PrintJob job1 = new PrintJob("Job1");
-  PrintJob job2 = new PrintJob("Job2");
-  PrintJob job3 = new PrintJob("Job3");
+  Song job1 = new Song("Job1");
+  Song job2 = new Song("Job2");
+  Song job3 = new Song("Job3");
 
   demo.enqueue(job1);
   demo.enqueue(job2);
@@ -17,20 +17,20 @@ void draw() {
 
 
 
-class PrinterQueue {
+class Queue {
   // declare instance variables here
-  PrintJob head;
-  PrintJob tail;
+  Song head;
+  Song tail;
   int size;
 
-  PrinterQueue() {
+  Queue() {
     // constructor
     head = null;
     tail = null;
     size = 0;
   }
   // declare methods here
-  void enqueue(PrintJob n) {
+  void enqueue(Song n) {
     if (head == null) {
       head = n;
       tail = n;
@@ -42,12 +42,12 @@ class PrinterQueue {
     size = size++;
   }
 
-  PrintJob dequeue() {
+  Song dequeue() {
     head = head.getNextNode();
     return head;
   }
 
-  PrintJob peek() {
+  Song peek() {
     return head;
   }
 
