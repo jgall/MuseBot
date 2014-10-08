@@ -1,14 +1,15 @@
 void setup() {
-  PrinterQueue demo = new PrinterQueue();
-  Song job1 = new Song("Job1");
-  Song job2 = new Song("Job2");
-  Song job3 = new Song("Job3");
+  //Demo the song Queue
+  Queue demo = new Queue();
+  Song song1 = new Song("song1");
+  Song song2 = new Song("song2");
+  Song song3 = new Song("song3");
 
-  demo.enqueue(job1);
-  demo.enqueue(job2);
-  demo.enqueue(job3);
+  demo.enqueue(song1);
+  demo.enqueue(song2);
+  demo.enqueue(song3);
 
- // demo.dequeue();
+  demo.dequeue();
 
   println(demo.head.getContent());
 }
@@ -29,13 +30,12 @@ class Queue {
     tail = null;
     size = 0;
   }
-  // declare methods here
+  //methods here
   void enqueue(Song n) {
     if (head == null) {
       head = n;
       tail = n;
-    } 
-    else {
+    } else {
       tail.setNextNode(n);
       tail = n;
     }
@@ -58,8 +58,7 @@ class Queue {
   boolean isEmpty() {
     if (head==null) {
       return true;
-    } 
-    else {
+    } else {
       return false;
     }
   }

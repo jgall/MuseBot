@@ -3,7 +3,7 @@ class Song {
   String linkContent;
 
   Song(String tempContent) {
-    content = tempContent;
+    linkContent = tempContent;
   }
 
   void setNextNode(Song n) {
