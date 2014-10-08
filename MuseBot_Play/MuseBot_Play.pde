@@ -11,4 +11,6 @@ void draw() {
 
 void keyPressed() {
   link("http://www.youtube.com/watch?v=3a7cHPy04s8"); 
+  //once song is done close window 
+  //load new url and play
 }
