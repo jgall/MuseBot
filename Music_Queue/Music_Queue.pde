@@ -1,17 +1,20 @@
 void setup() {
-  //Demo the song Queue
+  //Demo the song Queue 
+  /*
   Queue demo = new Queue();
-  Song song1 = new Song("song1");
-  Song song2 = new Song("song2");
-  Song song3 = new Song("song3");
-
-  demo.enqueue(song1);
-  demo.enqueue(song2);
-  demo.enqueue(song3);
-
-  demo.dequeue();
-
-  println(demo.head.getContent());
+   Song song1 = new Song("song1");
+   Song song2 = new Song("song2");
+   Song song3 = new Song("song3");
+   
+   demo.enqueue(song1);
+   demo.enqueue(song2);
+   demo.enqueue(song3);
+   
+   demo.dequeue();
+   demo.dequeue();
+   
+   println(demo.head.getContent());
+   */
 }
 void draw() {
 }
