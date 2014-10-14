@@ -20,6 +20,7 @@ void draw() {
   rect(0, 0, 650, 50);
   museBotText();
   playPause();
+  timeline();
 }
 
 void museBotText() {
@@ -65,5 +66,12 @@ void mouseClicked() {
   if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
     paused=!paused;
   }
+}
+
+//if Jahn ever looks at this code, it won't be here anymore.
+
+void timeline() {
+  rect(86, 99, 550, 2, 5, 5, 5, 5); 
+  rect(86, 95, 2, 10, 5, 5, 5, 5); 
 }
 
