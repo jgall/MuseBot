@@ -35,7 +35,7 @@ void museBotText() {
 void playPause() {
   if (paused==false) {
     pauseButton();
-  } else if(paused==true) {
+  } else if (paused==true) {
     playButton();
   }
 }
@@ -49,11 +49,6 @@ void pauseButton() {
   }
   rect(25, 70, 15, 60);
   rect(53, 70, 15, 60);
-  if (mousePressed==true) {
-    if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
-      paused=true;
-    }
-  }
 }
 
 void playButton() {
@@ -64,10 +59,11 @@ void playButton() {
     fill(150);
   }
   triangle(25, 70, 25, 130, 68, 100);
-  if (mousePressed==true) {
-    if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
-      paused=false;
-    }
+}
+
+void mouseClicked() {
+  if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
+    paused=!paused;
   }
 }
 
