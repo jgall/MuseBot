@@ -1,4 +1,4 @@
-boolean paused;
+boolean paused=false;
 
 void setup() {
   size(650, 150);
@@ -28,48 +28,46 @@ void museBotText() {
   textSize(48);
   text("MuseBot", 0, 51);
   text("();", 196, 44);
+  textSize(14);
+  text("a Computer Science project", 461, 50);
 }
 
 void playPause() {
-  if (paused==true) {
-    playButton();
-  } else {
+  if (paused==false) {
     pauseButton();
+  } else if(paused==true) {
+    playButton();
   }
 }
 
 void pauseButton() {
+  noStroke();
   if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
-    if (mousePressed==true) {
-      paused=true;
-      // fill(255);
-    } else {
-      fill(100);
-      noStroke();
-      rect(25, 70, 15, 60);
-      rect(53, 70, 15, 60);
-    }
+    fill(120);
   } else {
-    fill(0);
-    noStroke();
-    rect(25, 70, 15, 60);
-    rect(53, 70, 15, 60);
+    fill(150);
+  }
+  rect(25, 70, 15, 60);
+  rect(53, 70, 15, 60);
+  if (mousePressed==true) {
+    if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
+      paused=true;
+    }
   }
 }
 
 void playButton() {
+  noStroke();
   if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
-    if (mousePressed==true) {
-      paused=false;
-    } else {
-      fill(100);
-      noStroke();
-      triangle(25, 70, 25, 130, 68, 100);
-    }
+    fill(120);
   } else {
-    fill(0);
-    noStroke();
-    triangle(25, 70, 25, 130, 68, 100);
+    fill(150);
+  }
+  triangle(25, 70, 25, 130, 68, 100);
+  if (mousePressed==true) {
+    if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
+      paused=false;
+    }
   }
 }
 
