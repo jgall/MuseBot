@@ -51,6 +51,10 @@ void playButton() {
 void mouseClicked() {
   if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
     paused=!paused;
+    if(myQueue.isEmpty() == false) {
+      link(myQueue.peek().linkContent);
+      myQueue.dequeue();
+    }
   }
 }
 

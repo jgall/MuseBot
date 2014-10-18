@@ -2,11 +2,13 @@
 
 //WARNING, Before running the program, you must go into the recieve class and enter the password for the gmail account. please do not commit anything with the password in it!
 
+//creates the queue
+Queue myQueue = new Queue();
+
 void setup() {
   size(650, 150);
   background(255);
-  //creates the queue
-  Queue myQueue = new Queue();
+
   
   //gets the links in the form of a single long string
   String links = getLinks();

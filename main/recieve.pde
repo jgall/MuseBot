@@ -2,7 +2,7 @@ import com.temboo.core.*;
 import com.temboo.Library.Google.Gmail.*;
 import processing.net.*;
 Client myClient;
-String username = "fcsmusebot", password = "enter password here"; // ENTERE THE PASSWORD HERE, AND THEN DELETE IT AGAIN BEFORE YOU COMMIT!
+String username = "fcsmusebot", password = "Enter the Password Here"; // ENTERE THE PASSWORD HERE, AND THEN DELETE IT AGAIN BEFORE YOU COMMIT!
 // Create a session using your Temboo account application details
 TembooSession session = new TembooSession("gaminator", "myFirstApp", "8450cfd815f24516864a77d78378d712");
 
