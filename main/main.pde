@@ -5,11 +5,18 @@
 void setup() {
   size(650, 150);
   background(255);
+  //creates the queue
   Queue myQueue = new Queue();
+  
+  //gets the links in the form of a single long string
   String links = getLinks();
+  
+  //string parsing to get the links into an array
   links = links.replaceAll("\"","");
   links = links.replaceAll("\\[","").replaceAll("\\]","");
   String[] linksList = split(links, ",");
+  
+  //adding the links to the queue
   for(int i=0;i<linksList.length;i++){
     Song temp = new Song(linksList[i]);
     myQueue.enqueue(temp);
