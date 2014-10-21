@@ -6,7 +6,7 @@
 Queue myQueue = new Queue();
 
 void setup() {
-  size(650, 150);
+  size(150, 190);
   background(255);
 
   

@@ -3,20 +3,36 @@ boolean paused=false;
 void draw() {
   background(255);
   fill(0);
-  rect(0, 0, 650, 50);
-  museBotText();
-  playPause();
-  timeline();
+  //rect(0, 0, 650, 50);
+  oneBigButton();
+  //playPause();
+  museBotText(0);
 }
 
-void museBotText() {
-  fill(255);
+void museBotText(int colorVal) {
+  fill(colorVal);
   //textFont(hLight, 45);
-  textSize(48);
-  text("MuseBot", 0, 51);
+  textSize(30);
+  text("MUSEBOT", 6, 36);
   // text("();", 196, 44);
-  textSize(14);
+ /* textSize(14);
   text("a Computer Science project", 461, 50);
+  */
+}
+void oneBigButton() {
+  noStroke();
+  if ((mouseX >= 10) && (mouseX <= 140) && (mouseY >= 50) && (mouseY <= 180)) {
+    fill(50);
+    background(0);
+  } else {
+    fill(10);
+    background(255);
+  }
+  rect (10,50,130,130);
+  
+  fill(255);
+  textSize(46);
+  text("NEXT", 16, 135);
 }
 
 void playPause() {
@@ -49,8 +65,8 @@ void playButton() {
 }
 
 void mouseClicked() {
-  if ((mouseX >= 25) && (mouseX <= 68) && (mouseY >= 70) && (mouseY <= 130)) {
-    paused=!paused;
+  if ((mouseX >= 10) && (mouseX <= 140) && (mouseY >= 50) && (mouseY <= 180)) {
+    //paused=!paused;
     
     //this opens a link each time you press the pause/play button. TODO clean this up and make it a function...
     if(myQueue.isEmpty() == false) {
